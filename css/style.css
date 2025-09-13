@@ -1,0 +1,14 @@
+.header{
+    background-color: #2c3e50 !important;
+    color: white;
+    z-index: 1001;
+}
+
+.header .navbar-brand{
+    color: white;
+    
+}
+
+.header .navbar-brand h1{
+    font-size: 16px !important;
+}

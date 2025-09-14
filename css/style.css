@@ -42,3 +42,7 @@ html{
     font-size: 1.5rem;
     animation: fade-in 1.5s ease-in forwards;
 }
+
+.curriculum-bg{
+    background-color: #2c3e50;
+}

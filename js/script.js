@@ -281,5 +281,21 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     });
     
+    document.querySelector('.arrow.up').addEventListener('click', function() {
+        window.scrollBy({
+            top: -window.innerHeight * 0.8,
+            behavior: 'smooth'
+        });
+        console.log(window.innerHeight);
+    })
+
+    document.querySelector('.arrow.down').addEventListener('click', function() {
+        window.scrollBy({
+            top: window.innerHeight * 0.8,
+            behavior: 'smooth'
+        });
+        console.log(window.innerHeight);
+    })
+
 });
 

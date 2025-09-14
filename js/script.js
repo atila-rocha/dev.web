@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', function(){
     curriculumelements.forEach(element => {
         element.addEventListener('click', function() {
             mainpage.innerHTML=`
+<div class="scroll-buttons">
+    <a href="javascript:void(0)" style="max-width: fit-content;" id="Arrow-Up"><img src="up-arrow.png" class="arrow up"></a>
+    <a href="javascript:void(0)" style="max-width: fit-content;" id="Arrow-Down"><img src="down-arrow.png" class="arrow down"></a>
+</div>
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-lg-10 col-xl-8">
@@ -281,17 +285,17 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     });
     
-    document.querySelector('.arrow.up').addEventListener('click', function() {
+    document.getElementById('Arrow-Up').addEventListener('click', function() {
         window.scrollBy({
-            top: -window.innerHeight * 0.8,
+            top: -window.innerHeight * 0.2,
             behavior: 'smooth'
         });
         console.log(window.innerHeight);
     })
 
-    document.querySelector('.arrow.down').addEventListener('click', function() {
+    document.getElementById('Arrow-Down').addEventListener('click', function() {
         window.scrollBy({
-            top: window.innerHeight * 0.8,
+            top: window.innerHeight * 0.2,
             behavior: 'smooth'
         });
         console.log(window.innerHeight);

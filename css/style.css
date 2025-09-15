@@ -96,7 +96,7 @@ body.dark-mode .btn-pattern{
 .scroll-buttons{
     z-index: 1001;
     position: fixed;
-    top: 17rem;
+    top: 40%;
     right: 2rem;
     display: flex;
     flex-direction: column;

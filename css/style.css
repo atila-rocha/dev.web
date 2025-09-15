@@ -57,9 +57,9 @@ body.dark-mode .btn-pattern{
     align-self: center;
 }
 
-#Boas-Vindas{
-    margin-top: 2rem;
-    font-size: 1.5rem;
+#boas-vindas{
+    margin-top: 2rem !important;
+    font-size: 1.5rem !important;
 }
 
 
@@ -113,6 +113,16 @@ body.dark-mode .btn-pattern{
 .arrow.up{
     margin: 0rem 0rem 2rem 0rem;
 }
+
+#dark-mode{
+    max-width: 2rem;
+}
+
+.scroll-button {
+    background: transparent; /* Torna o fundo transparente */
+    border: none;
+}
+
 
 @keyframes fade-in {
     0%{

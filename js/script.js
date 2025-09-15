@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function(){
         window.location.href='index.html';
     });
 
-    const curriculumelements= document.querySelectorAll('a.nav-link.curriculum[href="#"], #Botao-Curriculo');
+    const curriculumelements= document.querySelectorAll('button.nav-link.curriculum, #Botao-Curriculo');
     curriculumelements.forEach(element => {
         element.addEventListener('click', function() {
             mainpage.innerHTML=`
@@ -320,7 +320,7 @@ document.addEventListener('DOMContentLoaded', function(){
         observer.observe(element);
     });
 
-    document.getElementById('Dark-Mode').addEventListener('click', function(){
+    document.getElementById('dark-mode').addEventListener('click', function(){
         document.body.classList.toggle('dark-mode');
         if (document.body.classList.contains('dark-mode')) {
             localStorage.setItem('darkMode', 'true');

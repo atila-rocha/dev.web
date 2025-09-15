@@ -1,11 +1,9 @@
-*{
-    font-family: 'Poppins', sans-serif;
-}
 html{
     font-size: 16px;
     scroll-behavior: smooth;
 }
 body{
+    font-family: 'Poppins', sans-serif;
     background-color: white;
     color: black;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -28,7 +26,6 @@ body.dark-mode .btn-pattern{
 .header{
     background-color: #2c3e50 !important;
     color: white;
-    z-index: 1001;
 }
 
 .header .navbar-brand{
@@ -52,9 +49,6 @@ body.dark-mode .btn-pattern{
 
 .main{
     text-align: center;
-    align-items: center;
-    align-content: center;
-    align-self: center;
 }
 
 #boas-vindas{
@@ -90,7 +84,7 @@ body.dark-mode .btn-pattern{
 
 .fade-in-element{
     opacity: 1;
-    transform: translateX(0rem);
+    transform: translateY(0rem);
 }
 
 .scroll-buttons{
@@ -137,9 +131,6 @@ body.dark-mode .btn-pattern{
 @media (max-width: 768px) {
     .main{
         text-align: center;
-        align-items: center;
-        align-content: center;
-        align-self: center;
         margin-left: 5rem;
         margin-right: 5rem;
     }

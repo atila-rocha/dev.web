@@ -10,26 +10,36 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg header">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><h1>Átila Carvalho Rocha<h1></a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
+       <nav class="navbar navbar-expand-lg header">
+    <div class="container-fluid">
+        <!-- Brand/Logo -->
+        <a class="navbar-brand" href="#">
+            <h1 class="mb-0">Átila Carvalho Rocha</h1>
+        </a>
+        
+        <!-- Botão Hambúrguer para Mobile -->
+        <button class="navbar-toggler toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon bg-light"></span>
+        </button>
+        
+        <!-- Menu Collapse -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto"> <!-- ms-auto alinha à direita -->
+                <li class="nav-item mx-2">
                     <a class="nav-link curriculum" href="#">Currículo</a>
-                  </li>
-                </ul>
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
+                </li>
+                <li class="nav-item mx-2">
                     <a class="nav-link curriculum" href="#Social-Media">Mídias Sociais</a>
-                  </li>
-                </ul>
-                <ul class="navbar-nav mx-4">
-                    <a class="nav-link" href="#"><img src="dark-mode.png" style="max-width: 3rem;" id="Dark-Mode"></a>
-                </ul>
-            </div>
-        </nav>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#" id="dark-mode-link">
+                        <img src="dark-mode.png" style="max-width: 2rem;" id="Dark-Mode" alt="Dark Mode">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
         <div class="scroll-buttons">
             <a href="javascript:void(0)" style="max-width: fit-content;" id="Arrow-Up"><img src="up-arrow.png" class="arrow up"></a>
             <a href="javascript:void(0)" style="max-width: fit-content;" id="Arrow-Down"><img src="down-arrow.png" class="arrow down"></a>
@@ -68,9 +78,9 @@
                 <h2>Mídias Sociais</h2>
                 <p class="mt-2 mb-4">Veja onde me achar!</p>
                 <div>
-                    <a href="https://www.linkedin.com/in/%C3%A1tila-carvalho-rocha/" target="_blank"><img src="linkedin.png" alt="" style="max-width: 5.5rem;"></a>
+                    <a href="https://www.linkedin.com/in/%C3%A1tila-carvalho-rocha/" target="_blank" style="margin: auto auto;"><img src="linkedin.png" alt="" style="max-width: 5.5rem;"></a>
                     
-                    <a href="https://www.linkedin.com/in/%C3%A1tila-carvalho-rocha/" class="btn btn-pattern btn-sm" target="_blank">Acesse meu LindedIn</a>
+                    <a href="https://www.linkedin.com/in/%C3%A1tila-carvalho-rocha/" class="btn btn-pattern" target="_blank" style="margin: auto auto ;">Acesse meu LindedIn</a>
                 </div>
         </div>
         

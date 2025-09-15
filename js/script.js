@@ -1,5 +1,50 @@
 document.addEventListener('DOMContentLoaded', function(){
     const mainpage=document.getElementById('Main');
+    function setupArrows() {
+        // ✅ Aguardar elementos existirem
+        const checkAndSetup = () => {
+            const arrowUp = document.getElementById('Arrow-Up');
+            const arrowDown = document.getElementById('Arrow-Down');
+
+            console.log('Verificando setas:', { arrowUp, arrowDown });
+
+            if (arrowUp && arrowDown) {
+                // ✅ Remover listeners anteriores (evitar duplicação)
+                arrowUp.replaceWith(arrowUp.cloneNode(true));
+                arrowDown.replaceWith(arrowDown.cloneNode(true));
+
+                // ✅ Buscar novamente após clonagem
+                const newArrowUp = document.getElementById('Arrow-Up');
+                const newArrowDown = document.getElementById('Arrow-Down');
+
+                newArrowUp.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollBy({
+                        top: -window.innerHeight * 0.2,
+                        behavior: 'smooth'
+                    });
+                    console.log('Scroll up executado');
+                });
+
+                newArrowDown.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollBy({
+                        top: window.innerHeight * 0.2,
+                        behavior: 'smooth'
+                    });
+                    console.log('Scroll down executado');
+                });
+
+                console.log('✅ Setas configuradas com sucesso');
+            } else {
+                console.log('❌ Setas não encontradas, tentando novamente...');
+                setTimeout(checkAndSetup, 10);
+            }
+        };
+
+        checkAndSetup();
+    }
+    setupArrows();
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
     if (isDarkMode) {
         document.body.classList.add('dark-mode');
@@ -13,10 +58,6 @@ document.addEventListener('DOMContentLoaded', function(){
     curriculumelements.forEach(element => {
         element.addEventListener('click', function() {
             mainpage.innerHTML=`
-<div class="scroll-buttons">
-    <a href="javascript:void(0)" style="max-width: fit-content;" id="Arrow-Up"><img src="up-arrow.png" class="arrow up"></a>
-    <a href="javascript:void(0)" style="max-width: fit-content;" id="Arrow-Down"><img src="down-arrow.png" class="arrow down"></a>
-</div>
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-lg-10 col-xl-8">
@@ -252,6 +293,9 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
 </div>
 `;
+            setTimeout(() => {
+            setupArrows();
+        }, 0);
         })
     });
     
@@ -285,21 +329,6 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     });
     
-    document.getElementById('Arrow-Up').addEventListener('click', function() {
-        window.scrollBy({
-            top: -window.innerHeight * 0.2,
-            behavior: 'smooth'
-        });
-        console.log(window.innerHeight);
-    })
-
-    document.getElementById('Arrow-Down').addEventListener('click', function() {
-        window.scrollBy({
-            top: window.innerHeight * 0.2,
-            behavior: 'smooth'
-        });
-        console.log(window.innerHeight);
-    })
 
 });
 
